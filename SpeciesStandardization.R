@@ -3,7 +3,7 @@
 ##
 ## Purpose of script: To transform commonly used fish species names, codes, and 
 ##    abbreviations to standard formats such as American Fisheries Society (AFS)
-##    name or International Taxonomic Information System (ITIS) code.  
+##    name or Interagency Taxonomic Information System (ITIS) code.  
 ##
 ## Author: George A. Maynard
 ##
