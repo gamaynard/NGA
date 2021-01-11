@@ -99,7 +99,14 @@ for(i in 1:nrow(new)){
 }
 ## Print out the new dataset (which is the same as the old, with two additional,
 ##  standardized columns) to a local .csv file
-nf=paste0("STANDARDIZED",filename)
+nf=paste0(
+  substr(
+    x=filename,
+    start=1,
+    stop=nchar(filename)-4
+    ),
+  "_STANDARDIZED.csv"
+)
 write.csv(
   x=new,
   file=nf
