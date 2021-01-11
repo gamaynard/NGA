@@ -157,3 +157,43 @@ for(i in 1:nrow(new)){
     stop('ERROR: MULTIPLE SPECIES MATCHES. SEE ABOVE.')
   }
 }
+## ---------------------------
+## The VTR column is already a character vector (to avoid loss of leading zeros)
+## The VESSEL column is already a character vector
+## The HAUL_NO column is already an integer
+## The startTime column needs to be converted to a POSIX value
+EM$STARTTIME=ymd_hm(
+  as.character(
+    EM$startTime
+  )
+)
+## The endTime column needs to be converted to a POSIX value
+EM$ENDTIME=ymd_hm(
+  as.character(
+    EM$endTime
+  )
+)
+## The startLat column needs to be converted to a number
+EM$STARTLAT=as.numeric(
+  as.character(
+    EM$startLat
+  )
+)
+## The startLon column needs to be converted to a number
+EM$STARTLON=as.numeric(
+  as.character(
+    EM$startLon
+  )
+)
+## Discard Count needs to be a number
+EM$DiscardCount=as.numeric(
+  as.character(
+    EM$count
+  )
+)
+## DiscardWeight needs to be a number
+EM$DiscardWeight=as.numeric(
+  as.character(
+    EM$weight
+  )
+)
