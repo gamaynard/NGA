@@ -5,3 +5,6 @@ All of the data sets referenced within these scripts have been catalogued in a m
 
 ## [SpeciesStandardization.R](SpeciesStandardization.R)
 This script takes a .csv file that has a species column and compares it to a long list of permutations of species names for fish and invertebrates commonly caught by the New England commercial groundfish fleet. Using fuzzy matching, each of the non-standardized entries is assigned a standardized American Fisheries Society common name as well as an Interagency Taxonomic Information System (ITIS) identification code. These two naming conventions adhere to the Atlantic Coastal Cooperative Statistics Program standards for fisheries data on the east coast of the United States. The results of the script are exported as a .csv file with a "STANDARDIZED" tag in the file name. 
+
+## [EMStandardization.R](EMStandardization.R)
+This script takes a .JSON file in the format that is accepted by the [NEFSC/GARFO API](https://fish.nefsc.noaa.gov/FSBEM/index.php) and converts it to a .csv file that has standardized species names, datetime formats, and latitude/longitude formats that can be compared with other standardized outputs from scripts in this repository.  
